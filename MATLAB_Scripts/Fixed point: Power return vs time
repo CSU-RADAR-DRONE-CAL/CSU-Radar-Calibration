@@ -1,0 +1,31 @@
+%fixed point time vs power return, get a line graph.
+List = ["cfrad.20191016_160117.848_to_20191016_160142.848_col-radar_DRONE_FIX_SUR.nc","cfrad.20191016_160555.079_to_20191016_160621.079_col-radar_DRONE_FIX_SUR.nc", "cfrad.20191016_160718.550_to_20191016_160744.550_col-radar_DRONE_FIX_SUR.nc","cfrad.20191016_160858.798_to_20191016_160903.798_col-radar_DRONE_FIX_SUR.nc","cfrad.20191016_161110.521_to_20191016_161115.521_col-radar_DRONE_FIX_SUR.nc","cfrad.20191016_163708.660_to_20191016_163712.660_col-radar_DRONE_FIX_SUR.nc","cfrad.20191016_164244.228_to_20191016_164249.228_col-radar_DRONE_FIX_SUR.nc","cfrad.20191016_165058.065_to_20191016_165102.065_col-radar_DRONE_FIX_SUR.nc","cfrad.20191016_173210.480_to_20191016_173214.480_col-radar_DRONE_FIX_SUR.nc","cfrad.20191016_175936.373_to_20191016_175941.373_col-radar_DRONE_FIX_SUR.nc","cfrad.20191016_182406.135_to_20191016_182410.135_col-radar_DRONE_FIX_SUR.nc","cfrad.20191016_183122.269_to_20191016_183127.269_col-radar_DRONE_FIX_SUR.nc","cfrad.20191016_185936.892_to_20191016_185941.892_col-radar_DRONE_FIX_SUR.nc", "cfrad.20191016_190126.256_to_20191016_190130.256_col-radar_DRONE_FIX_SUR.nc","cfrad.20191016_190330.620_to_20191016_190335.620_col-radar_DRONE_FIX_SUR.nc","cfrad.20191016_190628.501_to_20191016_190633.501_col-radar_DRONE_FIX_SUR.nc","cfrad.20191016_192859.889_to_20191016_192904.889_col-radar_DRONE_FIX_SUR.nc","cfrad.20191016_195728.550_to_20191016_195733.550_col-radar_DRONE_FIX_SUR.nc","cfrad.20191016_200219.045_to_20191016_200224.045_col-radar_DRONE_FIX_SUR.nc","cfrad.20191016_200905.657_to_20191016_200910.657_col-radar_DRONE_FIX_SUR.nc","cfrad.20191016_201305.573_to_20191016_201310.573_col-radar_DRONE_FIX_SUR.nc"];
+index = 1;
+while index <=21
+filename=strcat('U:\MATLAB\Senior Design\20191016\FIX_SUR\',List(index));
+
+ZDR_DiffRef                 = ncread(filename,'ZDR');
+DBZ                         = ncread(filename,'DBZ');
+SNR                         = ncread(filename,'SNR');
+range                       = ncread(filename,'range');
+ray_gate_spacing            = ncread(filename,'ray_gate_spacing');
+azimuth                     = ncread(filename,'azimuth');
+pulse_width                 = ncread(filename,'pulse_width');
+elevation                   = ncread(filename,'elevation');
+n_samples                   = ncread(filename,'n_samples');
+DBZ_TOT                     = ncread(filename,'DBZ_TOT');
+time                        = ncread(filename,'time');
+
+%Plotting power return vs time at 800m
+plot(DBZ(5,:))
+
+%Setting title and making plots in windows
+title(erase(filename,"U:\MATLAB\Senior Design\20191016\FIX_SUR\"));
+set(figure(index),'WindowStyle','docked');
+
+%finding max and mean power returns and placing all values in arrays
+Peaks=findpeaks(DBZ(5,:));
+AvgPeak(1,index)=max(Peaks);
+AvgPeak(2,index)=mean(Peaks);
+index = index+1;
+end
