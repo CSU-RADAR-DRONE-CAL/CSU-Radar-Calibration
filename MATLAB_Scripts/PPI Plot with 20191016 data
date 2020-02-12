@@ -1,0 +1,51 @@
+%List containing all data file names
+List = ["cfrad.20191016_160516.908_to_20191016_160544.066_col-radar_SPHERE_SECTO_PPI.nc","cfrad.20191016_162610.399_to_20191016_162637.187_col-radar_SPHERE_SECTO_PPI.nc","cfrad.20191016_162641.111_to_20191016_162707.988_col-radar_SPHERE_SECTO_PPI.nc","cfrad.20191016_162711.964_to_20191016_162738.980_col-radar_SPHERE_SECTO_PPI.nc","cfrad.20191016_162742.911_to_20191016_162809.962_col-radar_SPHERE_SECTO_PPI.nc","cfrad.20191016_162814.981_to_20191016_162842.024_col-radar_DRONE_SECTOR_PPI.nc","cfrad.20191016_162846.002_to_20191016_162912.991_col-radar_DRONE_SECTOR_PPI.nc","cfrad.20191016_164158.023_to_20191016_164224.610_col-radar_DRONE_SECTOR_PPI.nc","cfrad.20191016_164832.413_to_20191016_164859.442_col-radar_DRONE_SECTOR_PPI.nc","cfrad.20191016_164902.446_to_20191016_164929.523_col-radar_DRONE_SECTOR_PPI.nc","cfrad.20191016_164933.502_to_20191016_165000.603_col-radar_DRONE_SECTOR_PPI.nc","cfrad.20191016_165130.916_to_20191016_165157.861_col-radar_DRONE_SECTOR_PPI.nc","cfrad.20191016_165945.464_to_20191016_170012.407_col-radar_DRONE_SECTOR_PPI.nc","cfrad.20191016_170016.444_to_20191016_170043.454_col-radar_DRONE_SECTOR_PPI.nc","cfrad.20191016_170047.418_to_20191016_170114.681_col-radar_DRONE_SECTOR_PPI.nc","cfrad.20191016_170118.736_to_20191016_170145.848_col-radar_DRONE_SECTOR_PPI.nc","cfrad.20191016_170149.899_to_20191016_170216.891_col-radar_DRONE_SECTOR_PPI.nc","cfrad.20191016_170221.949_to_20191016_170248.856_col-radar_SPHERE_SECTO_PPI.nc","cfrad.20191016_170253.884_to_20191016_170320.721_col-radar_SPHERE_SECTO_PPI.nc","cfrad.20191016_170721.561_to_20191016_170748.457_col-radar_SPHERE_SECTO_PPI.nc","cfrad.20191016_170752.522_to_20191016_170819.714_col-radar_SPHERE_SECTO_PPI.nc","cfrad.20191016_170823.689_to_20191016_170850.809_col-radar_SPHERE_SECTO_PPI.nc","cfrad.20191016_170855.747_to_20191016_170922.862_col-radar_SPHERE_SECTO_PPI.nc","cfrad.20191016_170927.952_to_20191016_170955.049_col-radar_SPHERE_SECTO_PPI.nc","cfrad.20191016_171000.022_to_20191016_171027.012_col-radar_SPHERE_SECTO_PPI.nc","cfrad.20191016_171031.018_to_20191016_171057.867_col-radar_SPHERE_SECTO_PPI.nc","cfrad.20191016_171101.894_to_20191016_171128.959_col-radar_SPHERE_SECTO_PPI.nc","cfrad.20191016_171133.979_to_20191016_171200.955_col-radar_SPHERE_SECTO_PPI.nc","cfrad.20191016_171204.929_to_20191016_171231.852_col-radar_SPHERE_SECTO_PPI.nc","cfrad.20191016_171235.926_to_20191016_171302.501_col-radar_SPHERE_SECTO_PPI.nc","cfrad.20191016_171305.526_to_20191016_171332.261_col-radar_SPHERE_SECTO_PPI.nc","cfrad.20191016_171337.323_to_20191016_171404.443_col-radar_SPHERE_SECTO_PPI.nc","cfrad.20191016_171409.440_to_20191016_171436.295_col-radar_SPHERE_SECTO_PPI.nc","cfrad.20191016_171440.255_to_20191016_171507.075_col-radar_SPHERE_SECTO_PPI.nc","cfrad.20191016_171511.981_to_20191016_171539.078_col-radar_SPHERE_SECTO_PPI.nc","cfrad.20191016_171543.106_to_20191016_171610.385_col-radar_SPHERE_SECTO_PPI.nc","cfrad.20191016_172209.284_to_20191016_172236.124_col-radar_SPHERE_SECTO_PPI.nc","cfrad.20191016_173024.604_to_20191016_173051.581_col-radar_DRONE_SECTOR_PPI.nc","cfrad.20191016_173345.020_to_20191016_173401.943_col-radar_DRONE_SECTOR_PPI.nc","cfrad.20191016_175033.001_to_20191016_175049.753_col-radar_DRONE_SECTOR_PPI.nc","cfrad.20191016_175053.745_to_20191016_175110.858_col-radar_DRONE_SECTOR_PPI.nc","cfrad.20191016_175113.926_to_20191016_175131.028_col-radar_DRONE_SECTOR_PPI.nc","cfrad.20191016_175135.009_to_20191016_175151.991_col-radar_DRONE_SECTOR_PPI.nc","cfrad.20191016_175722.461_to_20191016_175739.432_col-radar_DRONE_SECTOR_PPI.nc","cfrad.20191016_175744.459_to_20191016_175811.649_col-radar_SPHERE_SECTO_PPI.nc","cfrad.20191016_175947.818_to_20191016_180014.880_col-radar_SPHERE_SECTO_PPI.nc","cfrad.20191016_182211.198_to_20191016_182227.962_col-radar_DRONE_SECTOR_PPI.nc","cfrad.20191016_182415.655_to_20191016_182442.664_col-radar_SPHERE_SECTO_PPI.nc","cfrad.20191016_182531.706_to_20191016_182558.661_col-radar_SPHERE_SECTO_PPI.nc","cfrad.20191016_183213.147_to_20191016_183240.241_col-radar_SPHERE_SECTO_PPI.nc","cfrad.20191016_190137.476_to_20191016_190204.185_col-radar_SPHERE_SECTO_PPI.nc","cfrad.20191016_190708.882_to_20191016_190735.472_col-radar_SPHERE_SECTO_PPI.nc","cfrad.20191016_192310.745_to_20191016_192337.558_col-radar_SPHERE_SECTO_PPI.nc","cfrad.20191016_193228.332_to_20191016_193255.374_col-radar_SPHERE_SECTO_PPI.nc","cfrad.20191016_194647.792_to_20191016_194714.559_col-radar_SPHERE_SECTO_PPI.nc","cfrad.20191016_195837.350_to_20191016_195904.472_col-radar_SPHERE_SECTO_PPI.nc","cfrad.20191016_195942.555_to_20191016_200009.696_col-radar_SPHERE_SECTO_PPI.nc","cfrad.20191016_200047.624_to_20191016_200114.342_col-radar_SPHERE_SECTO_PPI.nc"];
+
+index = 1;
+while index <=4
+
+%Setting filename and extracting all necessary variables
+filename= strcat('C:\Users\benku\OneDrive\Documents\MATLAB\CSUcomputer\MatlabCSU\20191016\PPI\',List(index));
+ZDR_DiffRef                 = ncread(filename,'ZDR');
+DBZ                         = ncread(filename,'DBZ');
+SNR                         = ncread(filename,'SNR');
+range                       = ncread(filename,'range');
+ray_gate_spacing            = ncread(filename,'ray_gate_spacing');
+azimuth                     = ncread(filename,'azimuth');
+pulse_width                 = ncread(filename,'pulse_width');
+elevation                   = ncread(filename,'elevation');
+n_samples                   = ncread(filename,'n_samples');
+DBZ_TOT                     = ncread(filename,'DBZ_TOT');
+
+%Using variables to calculate GateWidth,PusleWidth, Range and Azimuth
+GateWidth = ray_gate_spacing(1);
+PulseWidth = pulse_width(1);
+Range = [1:199].*.15;
+Range = Range+.05;
+%Azimuth polar to rectangular
+Azimuth= (azimuth*pi)/180;
+X = (Range.*cos(Azimuth));
+Y = (Range.*sin(Azimuth));
+
+%Plotting with pcolor and setting the figure 
+pcolor(Y',X',DBZ)
+axis equal
+shading flat
+
+%Using the National Weather Service official colormap
+load('nws.mat')
+colormap(nwsZ)
+caxis([-22,64])
+colorbar
+grid
+
+xlim([-6 6])
+ylim([0 30])
+
+%Setting title and windowing the figure
+figure(index)
+title(index)
+set(figure(index),'WindowStyle','docked')
+index = index+1;
+
+end
