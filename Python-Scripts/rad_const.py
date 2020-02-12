@@ -8,12 +8,12 @@ pi = np.pi
 Kw = .93
 T = .3*10**(-6)
 #el_az
-fields = ('Transmit Power dB', 'Range', 'Antenna Gain', 'Reflective Cross Section', 'Transmit Frequency', 'Radar Constant', 'Recieved Power dB')
+fields = ('Transmit Power dBm', 'Range', 'Antenna Gain', 'Reflective Cross Section', 'Transmit Frequency', 'Radar Constant', 'Recieved Power dB')
 data = {'kW': .93, 'T':.3*10**(-6), 'C':const.c, 'pi':np.pi}
 def received_power(entries):
     r = float(entries['Range'].get())
     print("r", r)
-    xmit = 10**((float(entries['Transmit Power dB'].get())-30)/10)
+    xmit = 10**((float(entries['Transmit Power dBm'].get())-30)/10)
     print("xmit", xmit)
     Go_squared =  (10**(float(entries['Antenna Gain'].get())/10))**2
     print("Go", Go_squared)
@@ -24,15 +24,15 @@ def received_power(entries):
     n = xmit*Go_squared*wavelength_squared*xsection
     d = ((4*pi)**3)*(r**4)
     ans = n/d
-    ansdb = 10*np.log10(10*ans)
+    ansdb = 20*np.log10(ans)
     entries['Recieved Power dB'].delete(0, tk.END)
     entries['Recieved Power dB'].insert(0, ansdb)
-    print("Radar Constant: %f" % ansdb)
+    print("recieved power: %f" % ansdb)
 ## TODO: calculate Pr/Prad given antenna constants
 ##       calculate Z(R)
 
 def rad_const(entries):
-    xmit = 10**((float(entries['Transmit Power dB'].get())-30)/10)
+    xmit = 10**((float(entries['Transmit Power dBm'].get())-30)/10)
     Go_squared =  Go_squared =  (10**(float(entries['Antenna Gain'].get())/10))**2
     wavelength_squared = (C/(float(entries['Transmit Frequency'].get())*(10**9)))**2
     xsection = float(entries['Reflective Cross Section'].get())

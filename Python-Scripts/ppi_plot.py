@@ -13,7 +13,7 @@ ndX = (fh.variables['GateWidth'][1])*np.arange(len(fh.dimensions['Gate']))/1000
 ndY = fh.variables['Azimuth'][:]
 ndY = np.reshape(ndY,(len(fh.variables['Azimuth']),1))*(np.pi/180)
 nX = ndX*np.cos(ndY)
-nY = ndX*np.sin(ndY)
+nY = ndX*np.sin(ndY)*-1
 
 ncp = fh.variables['NormalizedCoherentPower'][:]
 rflct = fh.variables['Reflectivity'][:]
@@ -28,7 +28,10 @@ while not it.finished:
     it.iternext()
 
 plt.pcolormesh(nY, nX, rflct, vmin = -20, vmax = 64, cmap = clrs)
-plt.xlim(-3000,0)
+plt.xlabel('Range (km)')
+plt.ylabel('Elevation (m)')
+plt.title('RHI reflectivity')
+plt.xlim(1000,2500)
 plt.ylim(0,500)
-plt.colorbar()
+plt.colorbar().set_label('dB')
 plt.show()
