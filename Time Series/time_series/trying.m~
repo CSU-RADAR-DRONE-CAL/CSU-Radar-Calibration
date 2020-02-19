@@ -1,0 +1,6 @@
+l = length(HI)
+Pr = 10log10(HI.^2+HQ.^2);
+dat = chivo_timeSeries('13512.mat');
+
+
+
