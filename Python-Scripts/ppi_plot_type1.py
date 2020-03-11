@@ -14,10 +14,12 @@ ndY = fh.variables['Azimuth'][:]
 ndY = np.reshape(ndY,(len(fh.variables['Azimuth']),1))*(np.pi/180)
 nX = ndX*np.cos(ndY)
 nY = ndX*np.sin(ndY)
+#print(nY.shape)
+
 
 #ncp = fh.variables['NormalizedCoherentPower'][:]
 rflct = fh.variables['Reflectivity'][:]
-
+print(rflct.shape)
 clrs = colors.ListedColormap(cmap_arr, 'reflectivity')
 #it = np.nditer(ncp, flags=['multi_index'])
 
