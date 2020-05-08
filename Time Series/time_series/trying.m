@@ -18,11 +18,11 @@ PrmV = 10*log10((VI.^2+VQ.^2)/2);
 PrHV = 10*log10(((HI.^2+HQ.^2).*(VI.^2+VQ.^2))/2);
 PrZ = PrmH-PrmV;
 
-figure(1)
-pcolor(Y,X,PrmH');
-ylim([0 1])
-shading flat
-colorbar
+%figure(1)
+%pcolor(Y,X,PrmH');
+%ylim([0 1])
+%shading flat
+%colorbar
 
 figure(2)
 pcolor(Y,X,PrmH');
